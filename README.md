@@ -11,7 +11,7 @@ The advantage of subprocess would have been to check the status of the process b
 ## To run the client:   
 python test_client_multi.py   
 
-Here, input is the number of clients you want to run. I have made the T as randomized. I have taken the idea of crawlers to write this part of code using asyncio package. But I was not well versed. So, I pre-created the urls with client id and the bigints and then made the calls in the async manner. I learnt about usage of asyncio in event-driven architecture also.  
+Here, input is the number of clients you want to run. I have made the T as randomized. I have taken the idea of crawlers to write this part of code using asyncio package. But I was not well versed with it. So, I pre-created the urls with client id and the bigints and then made the calls in the async manner.
 
 After the test_client_multi.py has executed, already the bst_client.json is dumped. Now, stop the server by interrupt also. So, the bst_server.pkl file will also be created in the same directory. 
 
