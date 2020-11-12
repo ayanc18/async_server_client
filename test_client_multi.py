@@ -47,6 +47,7 @@ def event_driver(urls,max_threads):
     tasks = [handle_tasks(task_id, q, ) for task_id in range(max_threads)]
     loop.run_until_complete(asyncio.wait(tasks))
     loop.close()
+    #dumping the list of dict [i.e. client id and value key value pairs] as json file.
     with open('bst_client.json', 'w') as fp:
         json.dump(list_resp, fp)
 
@@ -61,7 +62,7 @@ if __name__ == '__main__':
         url = api + str(intval) + '/' + str(i)
         urls.append(url)
     event_driver(urls,max_threads)
-    #dumping the list of dict [i.e. client id and value key value pairs] as json file.
+    
 
     # now opening the file and building the BST and doing inorder traversal to validate
     bin_tree = BST()
